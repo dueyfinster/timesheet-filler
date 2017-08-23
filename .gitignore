@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 tags
+hours.ini
 
 # C extensions
 *.so

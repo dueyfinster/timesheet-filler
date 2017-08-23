@@ -69,12 +69,14 @@ def wait_for_timesheet_table(driver, wait):
         (By.ID, "aaaaKEBH.VcCatTableWeek.WORKDATE1_InputField.0")))
 
 def fill_in_timesheet(driver):
+    time.sleep(2)
     # Fill in days of the week with 8 hours each
     for i in range(1,6):
         elem = driver.find_element_by_id("aaaaKEBH.VcCatTableWeek.WORKDATE"+str(i)+"_InputField.0")
         elem.click()
         elem.clear()
         elem.send_keys('8')
+        time.sleep(1)
 
 def submit_and_confirm_timesheet(driver, wait):
     # Wait for javascript to digest our fast hours entry :)
